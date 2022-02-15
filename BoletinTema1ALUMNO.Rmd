@@ -122,38 +122,32 @@ colnames(df_animals)
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
 
 ```{r}
-
-
-
-
-
-
+commonAnimals <- intersect(df_mammals, df_animals)
+rownames(commonAnimals)
 ```
 
 e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo de animales son?
 
 ```{r}
+dif_mammels <- setdiff(rownames(df_mammals), rownames(df_animals))
+dif_mammels
+len_m = length(dif_mammels)
 
+dif_animals <- setdiff(rownames(df_animals), rownames(df_mammals))
+dif_animals
+len_a = length(dif_animals)
 
+total_dif <- len_m + len_a
+total_dif
 
-
-
-
+#Como podemos observar hay 11 animales que no están en ambos conjuntos, 3 de ellos son dinosaurios que se encuentran en animals. Los 8 restantes son animales que se encuentran en ambos conjuntos pero con nombres ligeramente distintos.
 ```
 
 e.  Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
 
 ```{r}
 
-
-
-
-
-
-
-
-
-
+#3 de los animales son dinosaurios que se encuentran en el conjunto animals. Los 8 restantes son animales que se encuentran en ambos conjuntos pero con nombres ligeramente distintos.
 
 
 ```
