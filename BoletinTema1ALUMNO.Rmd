@@ -291,6 +291,18 @@ b.  Repite el apartado anterior, pero obteniendo un modelo para cada una de las 
 ```{r}
 #Apartado A
 plot(cabbages$VitC ~ cabbages$HeadWt) #Este gráfico compara la vitamina c con respecto al peso de la calabaza.
+#Como se observar no existe relación lineal.
+
+#Apartado B
+plot(cabbages$VitC ~ cabbages$HeadWt, pch=c(1,18)[cabbages$Cult])#comparacion **VitC** en función del peso de la calabaza **HeadWt** por  variedad de calabaza
+
+
+Modeloc39<-lm(cabbages$VitC ~ cabbages$HeadWt, data=cabbages, subset=which(Cult=="c39"))#obtenemos el modelo c39
+Modeloc52<-lm(cabbages$VitC ~ cabbages$HeadWt, data=cabbages, subset=which(Cult=="c52"))#obtenemos el modelo c52
+
+abline(Modeloc39, lty=3)
+abline(Modeloc52)
+
 
 
 
