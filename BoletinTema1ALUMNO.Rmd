@@ -206,28 +206,16 @@ length(libReturn$results) / 3
     d.  Utiliza la función **summary**, sobre **cabbages** y **Chile** y observa como, además de otros estadísticos, también devuelve el número de valores perdidos de cada variable.
 
 ```{r}
+#Apartado A
+head(cabbages)
+tail(cabbages)
+dim(cabbages)
+glimpse(cabbages)
+str(cabbages)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#Apartado B
+any(is.na(cabbages))
+colSums(sapply(cabbages, is.na))
 
 
 
