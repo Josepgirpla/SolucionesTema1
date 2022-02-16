@@ -217,9 +217,15 @@ str(cabbages)
 any(is.na(cabbages))
 colSums(sapply(cabbages, is.na))
 
+#Apartado C
+head(Chile)
+dim(Chile)
+tail(Chile)
+glimpse(Chile)
+str(Chile)
 
-
-
+any(is.na(Chile))
+colSums(sapply(Chile, is.na))
 
 ```
 
